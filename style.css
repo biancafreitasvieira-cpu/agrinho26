@@ -1,0 +1,218 @@
+/* Importando uma fonte mais moderna e amigável do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
+
+:root {
+    --primary-green: #4caf50;
+    --dark-green: #2e7d32;
+    --light-green: #e8f5e9;
+    --leaf-green: #81c784;
+    --accent-blue: #29b6f6;
+    --alert-amber: #ff9800;
+    --dark-gray: #424242;
+    --bg-light: #f1f8e9; /* Fundo puxado para um tom bem suave de folha */
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--dark-gray);
+    margin: 0;
+    padding: 30px 20px;
+    /* Mini padrão decorativo de fundo simulando pontinhos sutis */
+    background-image: radial-gradient(#c8e6c9 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    /* Fundo com degradê moderno e orgânico */
+    background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+    color: white;
+    padding: 40px 20px;
+    border-radius: 24px; /* Cantos super arredondados e fofos */
+    margin-bottom: 30px;
+    box-shadow: 0 8px 24px rgba(46, 125, 50, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Detalhe decorativo: uma folhinha estilizada no fundo do topo */
+header::before {
+    content: "🌱";
+    position: absolute;
+    font-size: 8rem;
+    opacity: 0.15;
+    right: -20px;
+    bottom: -30px;
+    transform: rotate(-15deg);
+}
+
+header h1 {
+    font-family: 'Fredoka', sans-serif; /* Fonte arredondada perfeita para títulos */
+    margin: 0;
+    font-size: 2.4rem;
+    letter-spacing: 0.5px;
+}
+
+header p {
+    margin: 10px 0 0 0;
+    font-size: 1.2rem;
+    opacity: 0.95;
+    font-weight: 400;
+}
+
+.search-box {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 12px;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+select, button {
+    padding: 14px 20px;
+    font-size: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 14px;
+    outline: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    transition: all 0.3s ease;
+}
+
+select {
+    flex: 1;
+    background-color: #fafafa;
+    color: var(--dark-gray);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+select:focus {
+    border-color: var(--primary-green);
+    background-color: white;
+}
+
+button {
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+}
+
+button:hover {
+    background-color: var(--dark-green);
+    transform: scale(1.03); /* Dá um leve "pulo" ao passar o mouse */
+    box-shadow: 0 6px 15px rgba(46, 125, 50, 0.4);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 25px;
+}
+
+@media (max-width: 650px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+    .search-box {
+        flex-direction: column;
+    }
+}
+
+.card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 22px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
+    border: 2px solid transparent;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito decorativo: o card dá uma levantadinha sutil quando o mouse passa por cima */
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.card h2 {
+    font-family: 'Fredoka', sans-serif;
+    margin-top: 0;
+    color: var(--dark-green);
+    border-bottom: 3px dashed var(--light-green); /* Linha tracejada estilosa */
+    padding-bottom: 12px;
+    font-size: 1.5rem;
+}
+
+/* Colocando emojis fofos antes dos títulos via CSS */
+.card:nth-child(1) h2::before { content: "🌤️ "; }
+.card:nth-child(2) h2::before { content: "💡 "; }
+
+.weather-info p {
+    font-size: 1.1rem;
+    margin: 18px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fbfdfb;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #f0f0f0;
+}
+
+.weather-info span {
+    font-weight: 700;
+    color: var(--dark-green);
+    background-color: var(--light-green);
+    padding: 4px 12px;
+    border-radius: 20px; /* Transforma os números em pequenas "pílulas" coloridas */
+    font-size: 1.1rem;
+}
+
+/* Se for chuva, muda a cor do número para azul */
+#rain {
+    color: #0288d1;
+    background-color: #e1f5fe;
+}
+
+.alert-box {
+    padding: 20px;
+    border-radius: 16px;
+    font-weight: 500;
+    margin-top: 15px;
+    line-height: 1.6;
+    font-size: 1.05rem;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.alert-normal {
+    background-color: #f1fbf4;
+    color: #2e603a;
+    border: 2px solid #c8e6c9;
+}
+
+.alert-warning {
+    background-color: #fff9f1;
+    color: #874d00;
+    border: 2px solid #ffe0b2;
+}
+
+.alert-box strong {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}

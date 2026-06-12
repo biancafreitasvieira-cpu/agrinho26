@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Eco-Agrícola</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Agro Forte, Futuro Sustentável</h1>
+        <p>Painel de Previsão do Tempo e Alertas Eco-Agrícolas</p>
+    </header>
+
+    <div class="search-box">
+        <select id="city-select">
+            <option value="-23.5489,-46.6388">São Paulo - SP</option>
+            <option value="-22.9035,-43.2096">Rio de Janeiro - RJ</option>
+            <option value="-15.7801,-47.9292">Brasília - DF</option>
+            <option value="-30.0346,-51.2177">Porto Alegre - RS</option>
+            <option value="-3.1190,-60.0217">Manaus - AM</option>
+            
+            <option value="-25.4284,-49.2733">Curitiba - PR</option>
+            <option value="-23.3106,-51.1628">Londrina - PR</option>
+            <option value="-23.4209,-51.9331">Maringá - PR</option>
+            <option value="-24.9555,-53.4552">Cascavel - PR</option>
+            <option value="-25.0950,-50.1619">Ponta Grossa - PR</option>
+            <option value="-25.5163,-54.5854">Foz do Iguaçu - PR</option>
+        </select>
+        <button id="update-btn">Atualizar Painel</button>
+    </div>
+
+    <div class="dashboard">
+        <div class="card">
+            <h2>Previsão Atual</h2>
+            <div class="weather-info">
+                <p>Temperatura: <span id="temp">--</span>°C</p>
+                <p>Umidade do Ar: <span id="humidity">--</span>%</p>
+                <p>Chuva Esperada hoje: <span id="rain">--</span> mm</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Recomendações de Manejo</h2>
+            <div id="eco-alert" class="alert-box alert-normal">
+                Carregando informações agroecológicas...
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

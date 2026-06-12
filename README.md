@@ -1,1 +1,3 @@
 # agrinho26
+O Painel Eco-Agrícola é uma plataforma digital interativa desenvolvida para conectar a tecnologia climática em tempo real às práticas do campo. Com um visual moderno e acessível, o site transforma dados meteorológicos complexos em instruções simples e diretas para o dia a dia do produtor rural.
+O objetivo principal é promover o equilíbrio entre a produção e a conservação ambiental. Através da análise automatizada do clima (temperatura, umidade e chuvas), a ferramenta gera alertas e recomendações inteligentes de manejo, ajudando a combater o desperdício de água na irrigação, proteger os nutrientes do solo e reduzir o uso desnecessário de insumos químicos, garantindo um futuro agrícola forte e sustentável.
